@@ -4,11 +4,19 @@ print -> print()
 
 02
 *install requirements
+1. python interpreter
+2. code editor
+
+*learn about environment, setup python interpreter (choices), and venv migration.
 
 03
--single & multi-line comments
+*single & multi-line comments
+'''''' & #
+
 -python -> interpreter, tapi bisa dicompile menggunakan bytecode:
-di terminal dgn command: python -m py_compile main.py (file-name.py)
+di terminal dgn command:
+***python -m py_compile main.py (file-name.py)***
+
 -compile menjalankan program lebih cepat dari pada cara interpreter, akan terasa signifikan apabila baris program semakin banyak.
 
 04
@@ -27,11 +35,33 @@ tipe data -> jenis suatu data, terdiri dari:
 
 06
 -casting tipe data -> mengkonversi tipe data:
--konver input user: 
+notes: 
+False -> 0 (int), 0.0 (float)
+True -> 1 (int), 1.0 (float)
+*konversi string ke bool akan selalu true kecuali tidak ada string / karakter yang ditulis (string kosong.)
+*konversi string berisi alfabet akan error jika dikonver ke int or float.
 
 07
+-konver input user: 
+data input dari user secara default bertipe data string, untuk mengatur tipe data yang yang diinput oleh user agar sesuai dengan tipe data yang kita inginkan, maka gunakan casting tipe data. Jika kita menginginkan tipe data int atau float tetapi user mengisi alphabet atau simbol maka akan menimbulkan error, hal ini bisa diatasi dengan menggunakan exception atau error handling (ini akan dibahas di chapt. selanjutnya karena membutuhkan pemahaman mengenai pengkondisian)
+
+*overview contoh penggunaan exception untuk memberitahu user untuk memasukkan input angka:
+
+
+
+
+
+
+
+
+
 
 
 '''
 
-print('X = ?')
+while(True):
+    try:
+        int(input('Masukkan angka: '))
+        break
+    except ValueError:
+        print('Nilai yang anda masukkan bukan angka!')
