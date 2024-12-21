@@ -46,22 +46,30 @@ True -> 1 (int), 1.0 (float)
 data input dari user secara default bertipe data string, untuk mengatur tipe data yang yang diinput oleh user agar sesuai dengan tipe data yang kita inginkan, maka gunakan casting tipe data. Jika kita menginginkan tipe data int atau float tetapi user mengisi alphabet atau simbol maka akan menimbulkan error, hal ini bisa diatasi dengan menggunakan exception atau error handling (ini akan dibahas di chapt. selanjutnya karena membutuhkan pemahaman mengenai pengkondisian)
 
 *overview contoh penggunaan exception untuk memberitahu user untuk memasukkan input angka:
-
-
-
-
-
-
-
-
-
-
-
-'''
-
 while(True):
     try:
         int(input('Masukkan angka: '))
         break
     except ValueError:
         print('Nilai yang anda masukkan bukan angka!')
+
+
+08
+-operasi aritmatika
+*ada tujuh operator:
+**;
+/, //, %, *;
++, -.
+
+*Pangkat (**) dieksekusi terlebih dahulu, diikuti oleh pembagian (/), pembagian bulat (//), dan sisa pembagian (%), kemudian perkalian (*), dan terakhir penjumlahan (+) dan pengurangan (-).
+Jika ada beberapa operator dengan prioritas yang sama, mereka dieksekusi dari kiri ke kanan.
+Anda dapat menggunakan tanda kurung () untuk mengubah urutan eksekusi sesuai kebutuhan, yang dapat membantu meningkatkan kejelasan dan menghindari kebingungan.
+
+09
+-latihan konvertor suhu
+celcius (5): 4/5R, 9/5(C+32), C + 273
+reamur (4): 5/4C, 9/4(R+32), 4/5R + 273
+fahrenheit +-32: 5/9F(C-32)
+kelvin: C - 273
+
+'''
